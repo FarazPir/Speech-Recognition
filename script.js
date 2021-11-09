@@ -5,3 +5,9 @@ speech.interimResults = false
 function setup() {
   speech.start()
 }
+function parseResult() {
+    if(speech.resultValue) {
+        const color = speech.resultString.split(' ').pop().toUpperCase()
+        document.getElementById('lol').style.backgroudColor = color
+}
+}
